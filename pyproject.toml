@@ -1,0 +1,25 @@
+[project]
+name = "pyrunner-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pydantic>=2.12.5",
+    "pydantic-settings>=2.13.1",
+]
+
+[dependency-groups]
+browser = [
+    "playwright>=1.58.0",
+]
+dev = [
+    "pytest>=9.0.2",
+    "watchfiles>=1.1.1",
+]
+features = [
+    "aiomysql>=0.3.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
